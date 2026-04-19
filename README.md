@@ -1,0 +1,2 @@
+# Credit-card-fruaud-detection-using-ml-dl-enhanced-with-smote-kfold-and-Explainable_Ai
+"This project presents a Hybrid Credit Card Fraud Detection System combining Machine Learning and Deep Learning models to detect fraud. Data preprocessing, scaling, and SMOTE handle imbalance, while K-Fold improves robustness. ML and DL outputs are combined for accuracy. A Flask app enables user input, with XAI explaining key features."
