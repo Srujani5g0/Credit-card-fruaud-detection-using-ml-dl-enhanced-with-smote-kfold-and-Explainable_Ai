@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-3xl">
+
+    <h1 class="text-2xl font-bold text-center mb-6">Prediction Result</h1>
+
+    <div class="text-center mb-8">
+        <p class="text-lg font-semibold">Prediction:</p>
+        <p class="text-xl font-bold text-blue-600">{{ prediction }}</p>
+        <p class="mt-2 text-slate-600">Fraud Probability: {{ probability }}%</p>
+    </div>
+
+    <div>
+        <h2 class="text-lg font-semibold mb-4">Explainable AI (LIME) - Feature Contribution</h2>
+
+        <table class="w-full border border-slate-300 rounded-lg overflow-hidden">
+            <tr class="bg-slate-200">
+                <th class="p-3 text-left">Feature</th>
+                <th class="p-3 text-left">Impact</th>
+            </tr>
+
+            {% for feature, weight in explanation %}
+            <tr class="border-t">
+                <td class="p-3">{{ feature }}</td>
+                <td class="p-3">{{ weight }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="text-center mt-8">
+        <a href="/" class="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700">
+            Check Another Transaction
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

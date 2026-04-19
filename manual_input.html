@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Fraud Prediction</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+}
+</style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-5xl bg-white rounded-3xl shadow-2xl p-10 border border-slate-200">
+
+    <!-- Header -->
+    <div class="text-center mb-10">
+        <h1 class="text-3xl font-bold text-slate-800">Manual Fraud Detection</h1>
+        <p class="text-slate-500 mt-2">Enter transaction details to analyze fraud probability</p>
+    </div>
+
+    <form action="/predict_manual" method="post" class="space-y-8">
+
+        <!-- Time & Amount -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Transaction Time</label>
+                <input type="number" step="any" name="Time" required
+                       class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Transaction Amount</label>
+                <input type="number" step="any" name="Amount" required
+                       class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-slate-200 pt-6">
+            <h2 class="text-lg font-semibold text-slate-700 mb-4">PCA Features (V1 – V28)</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-h-[400px] overflow-y-auto pr-2">
+
+                <!-- V1 to V28 -->
+                <!-- Clean and aligned -->
+
+                <!-- Auto formatted manually -->
+
+                <!-- START FEATURES -->
+
+                <!-- Generate each input -->
+
+                <!-- 1 -->
+                <div>
+                    <label class="text-xs text-slate-600">V1</label>
+                    <input type="number" step="any" name="V1" required class="input-style">
+                </div>
+
+                <div><label class="text-xs text-slate-600">V2</label><input type="number" step="any" name="V2" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V3</label><input type="number" step="any" name="V3" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V4</label><input type="number" step="any" name="V4" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V5</label><input type="number" step="any" name="V5" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V6</label><input type="number" step="any" name="V6" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V7</label><input type="number" step="any" name="V7" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V8</label><input type="number" step="any" name="V8" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V9</label><input type="number" step="any" name="V9" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V10</label><input type="number" step="any" name="V10" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V11</label><input type="number" step="any" name="V11" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V12</label><input type="number" step="any" name="V12" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V13</label><input type="number" step="any" name="V13" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V14</label><input type="number" step="any" name="V14" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V15</label><input type="number" step="any" name="V15" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V16</label><input type="number" step="any" name="V16" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V17</label><input type="number" step="any" name="V17" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V18</label><input type="number" step="any" name="V18" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V19</label><input type="number" step="any" name="V19" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V20</label><input type="number" step="any" name="V20" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V21</label><input type="number" step="any" name="V21" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V22</label><input type="number" step="any" name="V22" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V23</label><input type="number" step="any" name="V23" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V24</label><input type="number" step="any" name="V24" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V25</label><input type="number" step="any" name="V25" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V26</label><input type="number" step="any" name="V26" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V27</label><input type="number" step="any" name="V27" required class="input-style"></div>
+                <div><label class="text-xs text-slate-600">V28</label><input type="number" step="any" name="V28" required class="input-style"></div>
+
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center pt-6">
+            <button type="submit"
+                class="px-10 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition duration-200">
+                Predict Fraud
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<style>
+.input-style {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.input-style:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+</style>
+
+</body>
+</html>
